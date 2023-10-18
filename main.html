@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Luna's Spooky Shop</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Luna's Spooky Shop</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="golden stars.png" id="stars">
+            <h2 id="text">Welcome to Luna's shop</h2>
+            <a href="#sec" id="button">Discover More</a>
+            <img src="cloud.png" id="clouds">
+        </section>  
+        <div class="sec" id="sec">
+            <ul>
+                <li>Hello Kitty</li>
+                <li>Fantasy Fiction</li>
+                <li>Superheroes and Villains</li>
+                <li>Fairy Tales</li>
+            </ul>
+        </div>
+        <script>
+            let stars = document.getElementById("stars");
+            let clouds = document.getElementById("clouds");
+            let text = document.getElementById("text");
+            let button = document.getElementById("button");
+
+            window.addEventListener('scroll', function(){
+                let value=window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                clouds.style.Top = value * 0 + 'px';
+                text.style.marginBottom = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
